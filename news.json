@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "categoryId": "news",
+    "title": "期間限定！推しカメラキャンペーンを実施します❤️",
+    "date": "2026.03.09",
+    "category": "キャンペーン",
+    "excerpt": "DXプラスプロプランにご加入の方向けに、推しカメラインタビューなどが楽しめる特別なキャンペーンを開催！この機会にぜひチェックしてね！",
+    "url": "https://www.dxlive.com/blog/oshicam_03_2026/",
+    "image": "assets/images/news_thumbnail_1_1773045710180.png"
+  },
+  {
+    "id": 2,
+    "categoryId": "events",
+    "title": "【イベント】るいちゃんハートで応援企画がスタート！",
+    "date": "2026.03.06",
+    "category": "イベント",
+    "excerpt": "ハートをたくさんプレゼントしてくれた方には特別なお返しが…！？大人気のライバー、るいちゃんと一緒に盛り上がる大チャンスをお見逃しなく！",
+    "url": "https://www.dxlive.com/blog/rururuiiii_event_mar672026/",
+    "image": "assets/images/news_thumbnail_2_1773045722676.png"
+  },
+  {
+    "id": 3,
+    "categoryId": "news",
+    "title": "新機能「ハートチップ」が登場！興奮を直接伝えよう",
+    "date": "2026.03.04",
+    "category": "アップデート",
+    "excerpt": "ついに新しい応援スタイル「ハートチップ」が実装されました！お気に入りの女の子の配信中に手軽に気持ちを伝えて仲良くなれる新機能です。",
+    "url": "https://www.dxlive.com/blog/hearticontip/",
+    "image": "assets/images/news_thumbnail_3_1773045736171.png"
+  },
+  {
+    "id": 4,
+    "categoryId": "creators",
+    "title": "noa1214ちゃん 3月の特別イベントのお知らせ",
+    "date": "2026.03.03",
+    "category": "クリエイター",
+    "excerpt": "「3月も一緒に盛り上がりましょう( ˃ ᵕ ˂ )✨」noa1214ちゃんが贈る今月限定のイベントスケジュールを公開しました！",
+    "url": "https://www.dxlive.com/blog/noa1214_event_mar2026/",
+    "image": "assets/images/news_thumbnail_4_1773045768252.png"
+  },
+  {
+    "id": 5,
+    "categoryId": "creators",
+    "title": "【特集】胸元チラリズム❤️視線釘付けの特別な瞬間",
+    "date": "2026.03.01",
+    "category": "特集",
+    "excerpt": "さりげない仕草や角度から生まれる「胸元チラリズム」を集めました。全部は見えないからこそ想像を掻き立てられる、とっておきの瞬間をお楽しみください！",
+    "url": "https://www.dxlive.com/event/mainPage/0326tevent",
+    "image": "assets/images/news_thumbnail_2_1773045722676.png"
+  },
+  {
+    "id": 6,
+    "categoryId": "creators",
+    "title": "今月お誕生日の女の子をピックアップしてお祝いしよう☑️",
+    "date": "2026.02.28",
+    "category": "特集",
+    "excerpt": "今月バースデーを迎える女の子たちのリストを更新しました。特別な日にお祝いの言葉をかけて、もっと仲良くなるチャンスです！",
+    "url": "https://www.dxlive.com/blog/bd1025/",
+    "image": "assets/images/news_thumbnail_1_1773045710180.png"
+  },
+  {
+    "id": 7,
+    "categoryId": "knowhow",
+    "title": "【公式ガイド】ラブンス（Lovense）を使ってファンと交流しよう！",
+    "date": "2026.03.09",
+    "category": "ノウハウ",
+    "excerpt": "ファンからのチップやアクションに連動して動き、配信を劇的に盛り上げるインタラクティブトイ「Lovense（ラブンス）」の使い方をキャスト向けに徹底解説！",
+    "url": "lovense_guide.html",
+    "image": "assets/images/news_thumbnail_3_1773045736171.png"
+  }
+]

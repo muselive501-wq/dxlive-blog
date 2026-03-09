@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DXLIVE Official Blog</title>
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="DXLIVEの公式ブログ。最新情報やクリエイターの魅力を発信します。">
+</head>
+<body>
+    <header class="navbar">
+        <div class="header-container">
+            <div class="logo">DXLIVE<span>BLOG</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="category.html?type=news">News</a>
+                <a href="category.html?type=creators">Creators</a>
+                <a href="category.html?type=events">Events</a>
+                <a href="category.html?type=knowhow">ノウハウ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>LATEST NEWS</h1>
+                <p>DXLIVEの最新情報やクリエイターの魅力を発信</p>
+            </div>
+        </section>
+
+        <section class="articles-container" id="news-container">
+            <!-- Articles will be loaded dynamically via JavaScript -->
+            <div style="text-align: center; width: 100%; color: var(--text-secondary); padding: 2rem;">
+                ニュースを読み込み中...
+            </div>
+        </section>
+        
+        <div class="pagination">
+            <button class="btn-outline">もっと見る</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">DXLIVE<span>BLOG</span></div>
+            <p>© 2026 DXLIVE Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const newsContainer = document.getElementById('news-container');
+
+            // Fetch the automatically generated news.json
+            fetch('news.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(articles => {
+                    // Clear the loading message
+                    newsContainer.innerHTML = '';
+                    
+                    // Render each article
+                    articles.forEach(article => {
+                        const articleHTML = `
+                            <article class="card">
+                                <div class="card-image-wrapper">
+                                    <img src="${article.image}" alt="${article.title}" class="card-image">
+                                    <span class="category-badge">${article.category}</span>
+                                </div>
+                                <div class="card-content">
+                                    <time datetime="${article.date.replace(/\./g, '-')}">${article.date}</time>
+                                    <h2 class="card-title">${article.title}</h2>
+                                    <p class="card-excerpt">${article.excerpt}</p>
+                                    <a href="${article.url}" class="read-more">続きを読む <span>→</span></a>
+                                </div>
+                            </article>
+                        `;
+                        newsContainer.insertAdjacentHTML('beforeend', articleHTML);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching news:', error);
+                    newsContainer.innerHTML = '<div style="text-align: center; width: 100%; color: #ff2d55; padding: 2rem;">最新情報の読み込みに失敗しました。後ほど再試行してください。</div>';
+                });
+        });
+    </script>
+</body>
+</html>

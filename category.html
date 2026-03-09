@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category | DXLIVE BLOG</title>
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="DXLIVEの公式ブログ。カテゴリ別の記事一覧です。">
+</head>
+<body>
+    <header class="navbar">
+        <div class="header-container">
+            <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">DXLIVE<span>BLOG</span></a></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="category.html?type=news">News</a>
+                <a href="category.html?type=creators">Creators</a>
+                <a href="category.html?type=events">Events</a>
+                <a href="category.html?type=knowhow">ノウハウ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section" id="category-hero" style="height: 250px;">
+            <div class="hero-content">
+                <h1 id="category-title">LOADING...</h1>
+                <p id="category-desc">記事を読み込んでいます</p>
+            </div>
+        </section>
+
+        <section class="articles-container" id="news-container">
+            <div style="text-align: center; width: 100%; color: var(--text-secondary); padding: 2rem;">
+                記事を読み込み中...
+            </div>
+        </section>
+        
+        <div class="pagination">
+            <button class="btn-outline">もっと見る</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">DXLIVE<span>BLOG</span></div>
+            <p>© 2026 DXLIVE Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryType = urlParams.get('type') || 'news';
+
+            const categoryTitles = {
+                'news': { title: 'NEWS', desc: 'DXLIVEの最新情報やアップデート情報' },
+                'creators': { title: 'CREATORS', desc: 'クリエイターの魅力や特集コンテンツ' },
+                'events': { title: 'EVENTS', desc: '開催中のイベントやキャンペーン情報' },
+                'knowhow': { title: 'KNOW-HOW', desc: 'キャスト向けの使い方やノウハウ集' }
+            };
+
+            const catInfo = categoryTitles[categoryType] || categoryTitles['news'];
+            document.getElementById('category-title').textContent = catInfo.title;
+            document.getElementById('category-desc').textContent = catInfo.desc;
+            document.title = `${catInfo.title} | DXLIVE BLOG`;
+
+            const newsContainer = document.getElementById('news-container');
+
+            // Fetch the automatically generated news.json
+            fetch('news.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(articles => {
+                    // Filter articles based on url param
+                    const filteredArticles = articles.filter(article => article.categoryId === categoryType);
+
+                    // Clear the loading message
+                    newsContainer.innerHTML = '';
+                    
+                    if (filteredArticles.length === 0) {
+                        newsContainer.innerHTML = '<div style="text-align: center; width: 100%; color: var(--text-secondary); padding: 2rem;">現在表示できる記事がありません。</div>';
+                        return;
+                    }
+
+                    // Render each article
+                    filteredArticles.forEach(article => {
+                        const articleHTML = `
+                            <article class="card">
+                                <div class="card-image-wrapper">
+                                    <img src="${article.image}" alt="${article.title}" class="card-image">
+                                    <span class="category-badge">${article.category}</span>
+                                </div>
+                                <div class="card-content">
+                                    <time datetime="${article.date.replace(/\./g, '-')}">${article.date}</time>
+                                    <h2 class="card-title">${article.title}</h2>
+                                    <p class="card-excerpt">${article.excerpt}</p>
+                                    <a href="${article.url}" class="read-more">続きを読む <span>→</span></a>
+                                </div>
+                            </article>
+                        `;
+                        newsContainer.insertAdjacentHTML('beforeend', articleHTML);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching news:', error);
+                    newsContainer.innerHTML = '<div style="text-align: center; width: 100%; color: #ff2d55; padding: 2rem;">情報の読み込みに失敗しました。後ほど再試行してください。</div>';
+                });
+        });
+    </script>
+</body>
+</html>
