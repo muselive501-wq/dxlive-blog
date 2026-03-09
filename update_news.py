@@ -111,7 +111,11 @@ def get_category_id(category_name):
 def process_feed(root):
     """Processes the parsed XML and generates a list of articles."""
     articles = []
-    namespaces = {'content': 'http://purl.org/rss/1.0/modules/content/'}
+    # Namespaces for RSS extensions
+    namespaces = {
+        'content': 'http://purl.org/rss/1.0/modules/content/',
+        'dc': 'http://purl.org/dc/elements/1.1/'
+    }
 
     channel = root.find("channel")
     if channel is None:
@@ -127,6 +131,10 @@ def process_feed(root):
         pub_date = item.findtext("pubDate", "")
         category = item.findtext("category", "ニュース")
         raw_excerpt = item.findtext("description", "")
+        
+        # Fetch the full content (content:encoded)
+        content_encoded = item.find("content:encoded", namespaces)
+        content_html = content_encoded.text if content_encoded is not None else ""
 
         date_str = parse_date(pub_date)
         category_id = get_category_id(category)
@@ -142,7 +150,9 @@ def process_feed(root):
             "date": date_str,
             "category": category,
             "excerpt": excerpt,
-            "url": link,
+            "content": content_html,
+            "url": f"article.html?id={idx + 1}",
+            "originalUrl": link,
             "image": image
         })
 

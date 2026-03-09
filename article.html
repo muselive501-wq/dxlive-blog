@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading... | DXLIVE BLOG</title>
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="DXLIVEの公式ブログ。記事の詳細ページです。">
+    <style>
+        body {
+            background-color: var(--bg-color);
+        }
+
+        /* 記事読み込み中の状態 */
+        #article-main {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #article-main.loaded {
+            opacity: 1;
+        }
+
+        /* 記事本文内のスタイル調整（RSS由来のHTMLへの対応） */
+        .article-body figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .article-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="header-container">
+            <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">DXLIVE<span>BLOG</span></a></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="category.html?type=news">News</a>
+                <a href="category.html?type=creators">Creators</a>
+                <a href="category.html?type=events">Events</a>
+                <a href="category.html?type=knowhow">ノウハウ</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span><a id="breadcrumb-category" href="#">Category</a><span>/</span><span id="breadcrumb-title">Article</span>
+    </div>
+
+    <main class="main-content" id="article-main" style="display: none;">
+        <section class="article-hero" id="article-hero">
+            <div class="hero-content">
+                <span class="category-badge" style="position: static; margin-bottom: 1rem; display: inline-block;" id="article-category">CATEGORY</span>
+                <h1 id="article-title">ARTICLE TITLE</h1>
+                <div class="article-meta">
+                    <time id="article-date">DATE</time>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-body">
+            <div class="article-content" id="article-content">
+                <!-- Content will be loaded here -->
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn-primary" onclick="window.history.back()">戻る</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="loading-state" style="text-align: center; padding: 5rem; color: var(--text-secondary);">
+        <p>記事を読み込んでいます...</p>
+    </div>
+
+    <div id="error-state" style="display: none; text-align: center; padding: 5rem; color: var(--accent-color);">
+        <h2>記事が見つかりませんでした</h2>
+        <p>URLが正しくないか、記事が削除された可能性があります。</p>
+        <button class="btn-outline" style="margin-top: 2rem;" onclick="location.href='index.html'">トップページへ戻る</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">DXLIVE<span>BLOG</span></div>
+            <p>© 2026 DXLIVE Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = parseInt(urlParams.get('id'));
+
+            if (isNaN(articleId)) {
+                showError();
+                return;
+            }
+
+            fetch('news.json')
+                .then(response => response.json())
+                .then(articles => {
+                    const article = articles.find(a => a.id === articleId);
+                    if (article) {
+                        displayArticle(article);
+                    } else {
+                        showError();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showError();
+                });
+        });
+
+        function displayArticle(article) {
+            document.getElementById('loading-state').style.display = 'none';
+            document.getElementById('article-main').style.display = 'block';
+
+            document.title = `${article.title} | DXLIVE BLOG`;
+            document.getElementById('article-title').textContent = article.title;
+            document.getElementById('article-date').textContent = article.date;
+            document.getElementById('article-category').textContent = article.category;
+            
+            // Breadcrumbs
+            document.getElementById('breadcrumb-title').textContent = article.title;
+            const breadcrumbCat = document.getElementById('breadcrumb-category');
+            breadcrumbCat.textContent = article.category;
+            breadcrumbCat.href = `category.html?type=${article.categoryId}`;
+
+            // Hero segment background
+            if (article.image) {
+                document.getElementById('article-hero').style.backgroundImage = `linear-gradient(135deg, rgba(32, 38, 50, 0.9) 0%, rgba(26, 31, 41, 0.95) 100%), url('${article.image}')`;
+            }
+
+            // Content
+            const contentArea = document.getElementById('article-content');
+            if (article.content) {
+                contentArea.innerHTML = article.content;
+            } else {
+                contentArea.innerHTML = `<p>${article.excerpt}</p><p style="margin-top: 2rem; text-align: center;"><a href="${article.originalUrl || article.url}" class="btn-outline" target="_blank">公式サイトで続きを読む</a></p>`;
+            }
+        }
+
+        function showError() {
+            document.getElementById('loading-state').style.display = 'none';
+            document.getElementById('error-state').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
