@@ -48,6 +48,16 @@
     "image": "assets/images/news_thumbnail_4_1773045768252.png"
   },
   {
+    "id": 101,
+    "categoryId": "knowhow",
+    "title": "【徹底検証】DXLIVEは怪しい？評判・安全性・違法性をプロが分かりやすく解説！",
+    "date": "2026.03.10",
+    "category": "評判・安全性",
+    "excerpt": "DXLIVEの評判や安全性について徹底検証。怪しい噂や違法性の有無、クレジットカード決済の安全性まで、初心者が気になるポイントをプロが解説します。",
+    "url": "safety-guide.html",
+    "image": "assets/images/news_thumbnail_1_1773045710180.png"
+  },
+  {
     "id": 100,
     "categoryId": "knowhow",
     "title": "【公式ガイド】ラブンス（Lovense）を使ってファンと交流しよう！",
