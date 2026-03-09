@@ -31,6 +31,106 @@ CATEGORY_MAP = {
 # Static articles that should always be preserved in the JSON
 STATIC_ARTICLES = [
     {
+        "id": 111,
+        "categoryId": "creators",
+        "title": "美女ぞろい！DXLIVEで「相性抜群の女の子」を見つける最短ルート",
+        "date": "2026.03.10",
+        "category": "キャスト紹介",
+        "excerpt": "DXLIVEで人気のジャンル（人妻・素人・美少女）と、自分に合ったキャストを効率よく探すための検索テクニックを公開します。",
+        "url": "popular-casts.html",
+        "image": "assets/images/news_thumbnail_4_1773045768252.png"
+    },
+    {
+        "id": 110,
+        "categoryId": "news",
+        "title": "2026年最新！ライブチャット比較・ランキング。なぜDXLIVEが最強なの？",
+        "date": "2026.03.10",
+        "category": "サイト比較",
+        "excerpt": "他社サイトとDXLIVEを徹底比較。画質、料金、キャストの質、独自機能の観点からDXLIVEが選ばれる理由を解説します。",
+        "url": "comparison.html",
+        "image": "assets/images/news_thumbnail_3_1773045736171.png"
+    },
+    {
+        "id": 109,
+        "categoryId": "knowhow",
+        "title": "DXLIVEの「身バレ」を徹底防止！安心して楽しむためのルールと裏技",
+        "date": "2026.03.10",
+        "category": "プライバシー",
+        "excerpt": "知り合いにバレずに遊ぶための設定、履歴削除、匿名決済の方法など、プライバシーを守るための全知識をまとめました。",
+        "url": "privacy-rules.html",
+        "image": "assets/images/news_thumbnail_2_1773045722676.png"
+    },
+    {
+        "id": 108,
+        "categoryId": "knowhow",
+        "title": "えっ、見れない！？DXLIVEの「困った」を5分で解決するQ&A",
+        "date": "2026.03.10",
+        "category": "トラブル解決",
+        "excerpt": "繋がらない、重い、メールが届かない等のよくあるトラブルの解決策を、初心者でも分かりやすくまとめました。",
+        "url": "trouble-shooting.html",
+        "image": "assets/images/news_thumbnail_1_1773045710180.png"
+    },
+    {
+        "id": 107,
+        "categoryId": "knowhow",
+        "title": "いつでもどこでも！DXLIVEをスマホで快適に楽しむ唯一の方法",
+        "date": "2026.03.10",
+        "category": "モバイルガイド",
+        "excerpt": "アプリ版の有無や、スマホのブラウザでアプリのように快適に視聴するための設定方法を解説します。",
+        "url": "mobile-guide.html",
+        "image": "assets/images/news_thumbnail_4_1773045768252.png"
+    },
+    {
+        "id": 106,
+        "categoryId": "knowhow",
+        "title": "2人だけの時間…DXLIVE「2ショット」と「リモちゃ」の極意",
+        "date": "2026.03.10",
+        "category": "独自機能",
+        "excerpt": "2ショットチャットの楽しみ方や、遠隔操作で一体感を味わえる「リモちゃ」機能の魅力を徹底解説！",
+        "url": "twoshot-guide.html",
+        "image": "assets/images/news_thumbnail_3_1773045736171.png"
+    },
+    {
+        "id": 105,
+        "categoryId": "knowhow",
+        "title": "【必見】DXLIVEの支払い方法！クレカ不要・匿名で安心な決済術",
+        "date": "2026.03.10",
+        "category": "支払い方法",
+        "excerpt": "クレジットカードなしで利用する方法や、家族にバレないVプリカ・コンビニ払いの匿名決済を解説します。",
+        "url": "payment-guide.html",
+        "image": "assets/images/news_thumbnail_2_1773045722676.png"
+    },
+    {
+        "id": 104,
+        "categoryId": "news",
+        "title": "知らないと損！DXLIVEで無料ポイントをガッツリ貰う方法まとめ",
+        "date": "2026.03.10",
+        "category": "キャンペーン",
+        "excerpt": "今すぐ貰える無料お試しポイントの獲得方法から、お得な倍増キャンペーン、クーポンの使い方まで公開！",
+        "url": "campaign-info.html",
+        "image": "assets/images/news_thumbnail_1_1773045710180.png"
+    },
+    {
+        "id": 103,
+        "categoryId": "news",
+        "title": "DXLIVEの料金は高い？1分いくら？ポイントの仕組みを完全網羅",
+        "date": "2026.03.10",
+        "category": "料金・ポイント",
+        "excerpt": "DXLIVEの料金体系、1分あたりの単価、お得な購入方法、利用時の節約テクニックを分かりやすく解説。",
+        "url": "pricing-guide.html",
+        "image": "assets/images/news_thumbnail_4_1773045768252.png"
+    },
+    {
+        "id": 102,
+        "categoryId": "knowhow",
+        "title": "【完全保存版】DXLIVEの始め方・使い方を初心者が迷わないよう徹底解説！",
+        "date": "2026.03.10",
+        "category": "初心者ガイド",
+        "excerpt": "DXLIVEの登録手順から、最初の使い方のコツ、退会方法まで、初心者が最初に読むべき情報を全てまとめました。",
+        "url": "beginner-guide.html",
+        "image": "assets/images/news_thumbnail_3_1773045736171.png"
+    },
+    {
         "id": 101,
         "categoryId": "knowhow",
         "title": "【徹底検証】DXLIVEは怪しい？評判・安全性・違法性をプロが分かりやすく解説！",
