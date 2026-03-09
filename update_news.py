@@ -237,6 +237,12 @@ def process_feed(root):
         category = item.findtext("category", "ニュース")
         raw_excerpt = item.findtext("description", "")
         
+        # --- Filtering: Only include articles that have been rewritten/curated ---
+        if link not in REWRITTEN_CONTENT:
+            continue
+            
+        print(f"Adding curated article: {title}")
+
         # Fetch the full content (content:encoded)
         content_encoded = item.find("content:encoded", namespaces)
         content_html = content_encoded.text if content_encoded is not None else ""
@@ -245,7 +251,7 @@ def process_feed(root):
         final_title = title
         final_content = content_html
         if link in REWRITTEN_CONTENT:
-            print(f"Applying rewritten content for: {title}")
+            # Applying rewritten content
             final_title = REWRITTEN_CONTENT[link].get("title", title)
             final_content = REWRITTEN_CONTENT[link].get("content", content_html)
 
