@@ -1,0 +1,39 @@
+name: Auto-Update News
+
+on:
+  schedule:
+    # Runs every day at 06:00 UTC (15:00 JST)
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run news update script
+        run: python update_news.py
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --quiet news.json || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "muselive501@gmail.com"
+          git config --local user.name "muselive501-wq"
+          git add news.json
+          git commit -m "🔄 Auto-update: news.json $(date +'%Y-%m-%d %H:%M')"
+          git push
