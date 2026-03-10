@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "id": 121,
     "categoryId": "knowhow",
@@ -198,5 +198,85 @@
     "excerpt": "登録から最初の視聴まで迷わないためのステップバイステップガイド。無料で楽しむためのコツも紹介。",
     "url": "beginner-guide.html",
     "image": "assets/images/eyecatch_beginner_guide.png"
+  },
+  {
+    "id": 101,
+    "categoryId": "knowhow",
+    "title": "【徹底検証】DXLIVEは危険？違法？5chやTwitterの口コミから安全性と実態を暴く",
+    "date": "2026.03.10",
+    "category": "安全性レビュー",
+    "excerpt": "DXLIVEの安全性、違法性、詐欺の噂を2ch/5ch/Twitterの口コミと運営実態から徹底検証。安心して遊ぶためのポイントを解説します。",
+    "url": "rumors-and-legality.html",
+    "image": "assets/images/eyecatch_rumors_legality.png"
+  },
+  {
+    "id": 100,
+    "categoryId": "knowhow",
+    "title": "要注意！DXLIVEでの録画・スクショはバレる？規約違反のペナルティとルール",
+    "date": "2026.03.10",
+    "category": "利用ルール",
+    "excerpt": "DXLIVE（デラックスライブ）の配信録画やスクリーンショット撮影の可否について。バレる仕組みやアカウント凍結などのペナルティを解説。",
+    "url": "recording-rules.html",
+    "image": "assets/images/eyecatch_recording.png"
+  },
+  {
+    "id": 99,
+    "categoryId": "knowhow",
+    "title": "DXLIVEの裏技テクニック！多窓・ミッション攻略・キャストが喜ぶ会話術",
+    "date": "2026.03.10",
+    "category": "攻略テクニック",
+    "excerpt": "DXLIVEをもっと楽しむための中・上級者向け裏技ガイド。複数視聴（多窓）のやり方やミッションによるポイント稼ぎ、モテる会話術を公開。",
+    "url": "advanced-techniques.html",
+    "image": "assets/images/eyecatch_advanced.png"
+  },
+  {
+    "id": 98,
+    "categoryId": "knowhow",
+    "title": "【損しない】DXLIVEのクーポン＆ありがとうポイント完全活用ガイド",
+    "date": "2026.03.10",
+    "category": "料金・ポイント",
+    "excerpt": "DXLIVEの料金を極限まで安くする！割引クーポンやキャンペーン情報、長く続けるほどお得になる「ありがとうポイント」の仕組みを解説。",
+    "url": "coupons-and-benefits.html",
+    "image": "assets/images/eyecatch_coupons.png"
+  },
+  {
+    "id": 97,
+    "categoryId": "knowhow",
+    "title": "DXLIVE vs 人気ライブチャット5社（SakuraLive・Mライブ等）徹底比較！",
+    "date": "2026.03.10",
+    "category": "サイト比較",
+    "excerpt": "デラックスライブは他と比べてどう？SakuraLive、Mライブ、STRIPCHAT、ライブJASMINなどの国内外有名サイトと画質・料金・キャストの質で徹底比較。",
+    "url": "competitor-comparison.html",
+    "image": "assets/images/eyecatch_comparison_ext.png"
+  },
+  {
+    "id": 96,
+    "categoryId": "creators",
+    "title": "【マニア必見】素人・人妻から無修正まで！DXLIVEのジャンル別キャストの探し方",
+    "date": "2026.03.10",
+    "category": "キャスト紹介",
+    "excerpt": "素人、人妻、コスプレ、巨乳などフェティッシュな欲求を満たすDXLIVEのジャンル検索攻略法。おすすめの探し方を紹介します。",
+    "url": "genre-guide.html",
+    "image": "assets/images/eyecatch_genre.png"
+  },
+  {
+    "id": 95,
+    "categoryId": "knowhow",
+    "title": "映像が重い・カクつく？DXLIVEの高画質化と快適設定＆トラブルシューティング",
+    "date": "2026.03.10",
+    "category": "トラブル解決",
+    "excerpt": "DXLIVEの配信画質を最高にする設定方法と、「重い」「映像が止まる」「カクつく」といった頻出トラブルの解決策をネットワーク・端末側の視点から解説。",
+    "url": "high-quality-settings.html",
+    "image": "assets/images/eyecatch_quality.png"
+  },
+  {
+    "id": 94,
+    "categoryId": "knowhow",
+    "title": "困った時のDXLIVE対応表！ログイン忘れ・ポイント返金・退会後のトラブル",
+    "date": "2026.03.10",
+    "category": "トラブル解決",
+    "excerpt": "DXLIVE退会後のデータはどうなる？間違えて買ったポイントは返金できる？パスワードを忘れた場合のログイン方法やサポートへの問い合わせ先まとめ。",
+    "url": "support-and-refund.html",
+    "image": "assets/images/eyecatch_support.png"
   }
 ]
