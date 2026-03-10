@@ -1,5 +1,49 @@
 [
   {
+    "id": 1767193200,
+    "categoryId": "events",
+    "title": "🩷noa1214ちゃん🩷バレンタインイベント📅 2月14日",
+    "date": "2026.01.01",
+    "category": "イベント情報",
+    "excerpt": "イベントの詳細が発表されました。...",
+    "url": "event-noa1214ちゃんバレンタインイベント-2月14日.html",
+    "image": "assets/images/eyecatch_event.png",
+    "original_url": "https://www.dxlive.com/blog/%e3%80%90noa1214%e3%81%a1%e3%82%83%e3%82%93-%e6%84%9f%e8%ac%9d%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e9%96%8b%e5%82%ac%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b%e3%80%91/"
+  },
+  {
+    "id": 1767193201,
+    "categoryId": "events",
+    "title": "るいちゃんハートで応援イベント開催",
+    "date": "2026.01.01",
+    "category": "イベント情報",
+    "excerpt": "イベントの詳細が発表されました。...",
+    "url": "event-るいちゃんハートで応援イベント開催.html",
+    "image": "assets/images/eyecatch_event.png",
+    "original_url": "https://www.dxlive.com/blog/rururuiiii_event_mar672026/"
+  },
+  {
+    "id": 1767193202,
+    "categoryId": "events",
+    "title": "バレンタイン特別リモちゃ企画💖",
+    "date": "2026.01.01",
+    "category": "イベント情報",
+    "excerpt": "イベントの詳細が発表されました。...",
+    "url": "event-バレンタイン特別リモちゃ企画.html",
+    "image": "assets/images/events/eyecatch_valentine_rimocha.png",
+    "original_url": "https://www.dxlive.com/blog/valentine-remocha2026-2/"
+  },
+  {
+    "id": 1767193203,
+    "categoryId": "events",
+    "title": "女の子の写真イベント一覧",
+    "date": "2026.01.01",
+    "category": "イベント情報",
+    "excerpt": "イベントの詳細が発表されました。...",
+    "url": "event-女の子の写真イベント一覧.html",
+    "image": "assets/images/events/eyecatch_photo_events.png",
+    "original_url": "https://www.dxlive.com/blog/photoevent_archive/"
+  },
+  {
     "id": 1773004800,
     "categoryId": "events",
     "title": "ハートで応援チップが登場",
