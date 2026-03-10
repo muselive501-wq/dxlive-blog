@@ -5,40 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DXLIVE FAN BLOG | デラックスライブ非公式攻略・情報サイト</title>
-    <meta name="description"
-        content="DXLIVE(デラックスライブ)を120%楽しむためのファンブログ。人気キャスト紹介、お得なキャンペーン情報、初心者向けガイド、支払い方法など役立つ情報を発信中。">
     <!-- Google Fonts: Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .hero {
-            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
-            padding: 80px 20px;
-            text-align: center;
-            color: white;
-            border-radius: 0 0 50px 50px;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 30px rgba(0, 114, 255, 0.3);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-    </style>
 </head>
 
 <body>
@@ -56,48 +28,10 @@
     </header>
 
     <main class="main-content">
-        <section class="hero">
-            <h1>DXLIVE FAN BLOG</h1>
-            <p>デラックスライブをもっと楽しく、もっとお得に。公式にはない裏技や最新トレンドを最速でお届けします。</p>
-        </section>
-
         <section class="section-container">
-            <h2 class="section-title">Latest Articles <span>最新記事</span></h2>
+            <h2 class="section-title">Latest Updates <span>最新ニュース</span></h2>
             <div class="news-grid" id="news-container">
-                <!-- Loading State -->
-                <div style="grid-column: 1/-1; text-align: center; padding: 40px;">読み込み中...</div>
-            </div>
-
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="category.html?type=news" class="btn-primary">すべての記事を見る</a>
-            </div>
-        </section>
-
-        <section class="section-container"
-            style="background: var(--card-bg); border-radius: 30px; padding: 60px 40px; margin-top: 80px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                <div>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--accent-color);">初心者の方へ</h2>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 30px;">
-                        DXLIVEを始めたばかりの方、これから始めたい方へ。登録方法から最初の楽しみ方まで、ステップバイステップで解説したガイドをご用意しました。
-                    </p>
-                    <a href="beginner-guide.html" class="btn-primary"
-                        style="background: var(--secondary-accent); border-color: var(--secondary-accent);">初心者ガイドを読む</a>
-                </div>
-                <div style="background: var(--gradient-primary); padding: 40px; border-radius: 20px; color: white;">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">人気のカテゴリー</h3>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 15px;"><a href="category.html?type=creators"
-                                style="color: white; text-decoration: none; display: flex; justify-content: space-between;">おすすめキャスト
-                                <span>→</span></a></li>
-                        <li style="margin-bottom: 15px;"><a href="category.html?type=knowhow"
-                                style="color: white; text-decoration: none; display: flex; justify-content: space-between;">勝てるノウハウ
-                                <span>→</span></a></li>
-                        <li style="margin-bottom: 15px;"><a href="category.html?type=events"
-                                style="color: white; text-decoration: none; display: flex; justify-content: space-between;">キャンペーン情報
-                                <span>→</span></a></li>
-                    </ul>
-                </div>
+                <!-- Data will be loaded via JS -->
             </div>
         </section>
     </main>
@@ -120,7 +54,7 @@
                 const container = document.getElementById('news-container');
                 container.innerHTML = '';
 
-                // Show only first 6 articles
+                // Show only 6 latest items on home
                 news.slice(0, 6).forEach(item => {
                     const card = document.createElement('div');
                     card.className = 'news-card';
@@ -142,7 +76,10 @@
                 console.error('Error loading news:', error);
             }
         }
-        loadNews();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNews();
+        });
     </script>
 </body>
 
