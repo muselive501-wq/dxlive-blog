@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -31,7 +31,7 @@
 
     <main class="main-content">
         <section class="section-container">
-            <h2 class="section-title">Latest Updates <span>最新ニュース</span></h2>
+            <h2 class="section-title">All Articles <span>すべての記事</span></h2>
             <div class="news-grid" id="news-container">
                 <!-- Data will be loaded via JS -->
             </div>
@@ -56,8 +56,8 @@
                 const container = document.getElementById('news-container');
                 container.innerHTML = '';
 
-                // Show only 6 latest items on home
-                news.slice(0, 6).forEach(item => {
+                // Show all items on home
+                news.forEach(item => {
                     const card = document.createElement('div');
                     card.className = 'news-card';
                     card.innerHTML = `
