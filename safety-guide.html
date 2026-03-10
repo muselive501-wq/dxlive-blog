@@ -25,6 +25,13 @@
                 <a href="category.html?type=creators">Creators</a>
                 <a href="category.html?type=events">Events</a>
                 <a href="category.html?type=knowhow">ノウハウ</a>
+            
+                <div class="search-container">
+                    <form action="search.html" method="get">
+                        <input type="text" name="q" placeholder="記事を検索..." class="search-input" required>
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
             </nav>
         </div>
     </header>
@@ -60,6 +67,11 @@
                     <a href="https://www.dxlive.com/" class="btn-primary">安心してDXLIVEを始めてみる</a>
                 </div>
             </div>
+        
+            <div class="related-articles-container">
+                <h3>関連記事</h3>
+                <div id="related-articles-grid" class="article-grid"></div>
+            </div>
         </section>
     </main>
 
@@ -73,6 +85,7 @@
         </div>
     </footer>
     <script>(function(){var h=document.getElementById("hamburger-btn"),n=document.querySelector(".nav-links"),o=document.getElementById("mobile-overlay");if(!h||!n||!o)return;function t(){h.classList.toggle("active");n.classList.toggle("open");o.classList.toggle("active")}h.addEventListener("click",t);o.addEventListener("click",t);n.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){if(n.classList.contains("open"))t()})})})();</script>
+    <script src="seo_features.js"></script>
 </body>
 
 </html>

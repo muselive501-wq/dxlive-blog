@@ -11,6 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "2Wayチャットからバイブ連動まで！DXLIVEの全機能を遊び尽くす【完全版】",
+    "image": [
+        "https://example.com/assets/images/eyecatch_allfeatures.png"
+    ],
+    "datePublished": "2026-03-10T08:00:00+08:00",
+    "dateModified": "2026-03-10T08:00:00+08:00",
+    "author": [
+        {
+            "@type": "Person",
+            "name": "DXLIVE FAN BLOG"
+        }
+    ],
+    "description": "DXLIVEのパーティチャット、2ショット、のぞき、チップ、バイブ連動（リモちゃ）など全チャットモードを完全解説。各機能の特徴と料金を比較表付きで紹介。"
+}
+    </script>
 </head>
 
 <body>
@@ -25,6 +45,13 @@
                 <a href="category.html?type=creators">Creators</a>
                 <a href="category.html?type=events">Events</a>
                 <a href="category.html?type=knowhow">ノウハウ</a>
+            
+                <div class="search-container">
+                    <form action="search.html" method="get">
+                        <input type="text" name="q" placeholder="記事を検索..." class="search-input" required>
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
             </nav>
         </div>
     </header>
@@ -37,6 +64,11 @@
             <time style="color: var(--text-secondary);">2026.03.10</time>
             <h1>2Wayチャットからバイブ連動まで！DXLIVEの全機能を遊び尽くす【完全版】</h1>
             <img src="assets/images/eyecatch_allfeatures.png" alt="アイキャッチ画像" class="article-image" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+
+            <div class="toc-container">
+                <h2>目次</h2>
+                <ul id="toc-list" class="toc-list"></ul>
+            </div>
 
             <div class="article-body" style="margin-top: 2rem;">
                 <p>DXLIVEには、ただ「見る」だけではない多彩な楽しみ方があります。パーティチャット、2ショット、のぞき、チップ、バイブ連動…。それぞれの機能を正しく理解すれば、<strong>あなたの楽しみ方は何倍にも広がり</strong>ます。この記事では、DXLIVEの全機能を徹底比較しながら解説します。
@@ -146,6 +178,11 @@
                     </ul>
                 </div>
             </div>
+        
+            <div class="related-articles-container">
+                <h3>関連記事</h3>
+                <div id="related-articles-grid" class="article-grid"></div>
+            </div>
         </section>
     </main>
 
@@ -159,6 +196,7 @@
         </div>
     </footer>
     <script>(function () { var h = document.getElementById("hamburger-btn"), n = document.querySelector(".nav-links"), o = document.getElementById("mobile-overlay"); if (!h || !n || !o) return; function t() { h.classList.toggle("active"); n.classList.toggle("open"); o.classList.toggle("active") } h.addEventListener("click", t); o.addEventListener("click", t); n.querySelectorAll("a").forEach(function (l) { l.addEventListener("click", function () { if (n.classList.contains("open")) t() }) }) })();</script>
+    <script src="seo_features.js"></script>
 </body>
 
 </html>

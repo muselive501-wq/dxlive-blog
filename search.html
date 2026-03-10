@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索結果 | DXLIVE FAN BLOG</title>
+    <meta name="description" content="DXLIVE FAN BLOGの検索結果ページです。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="header-container">
+            <a href="index.html" class="logo">DXLIVE<span>FAN BLOG</span></a>
+            <button class="hamburger" id="hamburger-btn"
+                aria-label="メニュー"><span></span><span></span><span></span></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="category.html?type=news">News</a>
+                <a href="category.html?type=creators">Creators</a>
+                <a href="category.html?type=events">Events</a>
+                <a href="category.html?type=knowhow">ノウハウ</a>
+                <div class="search-container">
+                    <form action="search.html" method="get">
+                        <input type="text" name="q" placeholder="記事を検索..." class="search-input" required>
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <main class="main-content">
+        <div class="section-container content-wrapper">
+            <div class="main-column">
+                <h1 class="section-title" id="search-title">検索結果</h1>
+                <p id="search-count" style="margin-bottom: 2rem; color: var(--text-secondary);"></p>
+                <div class="article-grid" id="search-grid">
+                    <!-- Articles will be loaded here via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="footer-logo">DXLIVE<span>FAN BLOG</span></a>
+            <p>© 2026 DXLIVE FAN BLOG. All Rights Reserved.</p>
+            <div class="footer-nav" style="margin-top: 1rem;">
+                <a href="about.html" style="color: var(--text-secondary); margin: 0 10px;">About / Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var h = document.getElementById("hamburger-btn"),
+                n = document.querySelector(".nav-links"),
+                o = document.getElementById("mobile-overlay");
+            if (!h || !n || !o) return;
+            function t() {
+                h.classList.toggle("active");
+                n.classList.toggle("open");
+                o.classList.toggle("active");
+            }
+            h.addEventListener("click", t);
+            o.addEventListener("click", t);
+            n.querySelectorAll("a").forEach(function (l) {
+                l.addEventListener("click", function () {
+                    if (n.classList.contains("open")) t();
+                });
+            });
+        })();
+
+        // Search logic
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            const searchTitle = document.getElementById('search-title');
+            const searchCount = document.getElementById('search-count');
+            const searchGrid = document.getElementById('search-grid');
+
+            if (!query) {
+                searchTitle.textContent = '検索キーワードが入力されていません';
+                return;
+            }
+
+            searchTitle.textContent = '「' + query + '」の検索結果';
+
+            fetch('news.json')
+                .then(response => response.json())
+                .then(news => {
+                    const lowerQuery = query.toLowerCase();
+                    const results = news.filter(article => {
+                        const titleMatch = article.title.toLowerCase().includes(lowerQuery);
+                        const excerptMatch = article.excerpt.toLowerCase().includes(lowerQuery);
+                        const categoryMatch = article.category.toLowerCase().includes(lowerQuery);
+                        return titleMatch || excerptMatch || categoryMatch;
+                    });
+
+                    searchCount.textContent = '全 ' + results.length + ' 件見つかりました';
+
+                    if (results.length === 0) {
+                        searchGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-secondary);">該当する記事は見つかりませんでした<br>別のキーワードでお試しください</p>';
+                        return;
+                    }
+
+                    results.forEach(article => {
+                        const card = document.createElement('div');
+                        card.className = 'article-card';
+                        card.innerHTML = `
+                            <img src="${article.image}" alt="${article.title}" class="article-image">
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span class="category-badge">${article.category}</span>
+                                    <span class="article-date">${article.date}</span>
+                                </div>
+                                <h3 class="article-title">${article.title}</h3>
+                                <p class="article-excerpt">${article.excerpt}</p>
+                                <a href="${article.url}" class="read-more">READ MORE</a>
+                            </div>
+                        `;
+                        card.addEventListener('click', () => {
+                            window.location.href = article.url;
+                        });
+                        searchGrid.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching news:', error);
+                    searchGrid.innerHTML = '<p>エラーが発生しました。時間をおいて再度お試しください。</p>';
+                });
+        });
+    </script>
+</body>
+
+</html>

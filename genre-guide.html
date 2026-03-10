@@ -10,6 +10,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "【マニア必見】素人・人妻から無修正まで！DXLIVEのジャンル別キャストの探し方",
+    "image": [
+        "https://example.com/assets/images/eyecatch_genre.png"
+    ],
+    "datePublished": "2026-03-10T08:00:00+08:00",
+    "dateModified": "2026-03-10T08:00:00+08:00",
+    "author": [
+        {
+            "@type": "Person",
+            "name": "DXLIVE FAN BLOG"
+        }
+    ],
+    "description": "素人、人妻、コスプレ、巨乳などフェティッシュな欲求を満たすDXLIVEのジャンル検索攻略法。おすすめの探し方を紹介します。"
+}
+    </script>
 </head>
 
 <body>
@@ -23,6 +43,13 @@
                 <a href="category.html?type=creators">Creators</a>
                 <a href="category.html?type=events">Events</a>
                 <a href="category.html?type=knowhow">ノウハウ</a>
+            
+                <div class="search-container">
+                    <form action="search.html" method="get">
+                        <input type="text" name="q" placeholder="記事を検索..." class="search-input" required>
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
             </nav>
         </div>
     </header>
@@ -37,6 +64,11 @@
             
             <h1 style="font-size: 2rem; margin-bottom: 30px; line-height: 1.4; color: var(--text-primary);">【マニア必見】素人・人妻から無修正まで！DXLIVEのジャンル別キャストの探し方</h1>
             <img src="assets/images/eyecatch_genre.png" alt="アイキャッチ画像" class="article-image" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+
+            <div class="toc-container">
+                <h2>目次</h2>
+                <ul id="toc-list" class="toc-list"></ul>
+            </div>
 
 
             <h2>圧倒的人気！「素人・人妻・美少女」の探し方と選び方</h2>
@@ -63,6 +95,11 @@
                 <p style="margin-bottom: 25px; color: var(--text-secondary);">DXLIVEに無料登録して、今すぐ最高のライブチャット体験を始めよう！</p>
                 <a href="https://www.dxlive.com" target="_blank" class="read-more" style="font-size: 1.2rem; padding: 15px 40px;">公式サイト（仮）へ</a>
             </div>
+        
+            <div class="related-articles-container">
+                <h3>関連記事</h3>
+                <div id="related-articles-grid" class="article-grid"></div>
+            </div>
         </article>
     </main>
 
@@ -76,5 +113,6 @@
         </div>
     </footer>
     <script>(function(){var h=document.getElementById("hamburger-btn"),n=document.querySelector(".nav-links"),o=document.getElementById("mobile-overlay");if(!h||!n||!o)return;function t(){h.classList.toggle("active");n.classList.toggle("open");o.classList.toggle("active")}h.addEventListener("click",t);o.addEventListener("click",t);n.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){if(n.classList.contains("open"))t()})})})();</script>
+    <script src="seo_features.js"></script>
 </body>
 </html>

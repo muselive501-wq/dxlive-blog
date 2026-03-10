@@ -11,6 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "【最新】DXLIVEのクーポン・キャンペーン情報！無料ポイント獲得のコツ",
+    "image": [
+        "https://example.com/assets/images/eyecatch_campaign_info.png"
+    ],
+    "datePublished": "2026-03-10T08:00:00+08:00",
+    "dateModified": "2026-03-10T08:00:00+08:00",
+    "author": [
+        {
+            "@type": "Person",
+            "name": "DXLIVE FAN BLOG"
+        }
+    ],
+    "description": "DXLIVEのお得なキャンペーン情報と、会員登録、ログインボーナス、お誕生日特典などで無料でポイントをもらう方法を解説します。"
+}
+    </script>
 </head>
 
 <body>
@@ -24,6 +44,13 @@
                 <a href="category.html?type=creators">Creators</a>
                 <a href="category.html?type=events">Events</a>
                 <a href="category.html?type=knowhow">ノウハウ</a>
+            
+                <div class="search-container">
+                    <form action="search.html" method="get">
+                        <input type="text" name="q" placeholder="記事を検索..." class="search-input" required>
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
             </nav>
         </div>
     </header>
@@ -36,6 +63,11 @@
             <time style="color: var(--text-secondary);">2026.03.10</time>
             <h1>【最新】DXLIVEのクーポン・キャンペーン情報！無料ポイント獲得のコツ</h1>
             <img src="assets/images/eyecatch_campaign_info.png" alt="アイキャッチ画像" class="article-image" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+
+            <div class="toc-container">
+                <h2>目次</h2>
+                <ul id="toc-list" class="toc-list"></ul>
+            </div>
 
             <div class="article-body" style="margin-top: 2rem;">
                 <p>DXLIVEを最大限にお得に楽しむためには、公式が開催しているキャンペーンや、常設されているポイント獲得チャンスを見逃さないことが重要です。今回は、初心者からリピーターまで活用できる、最新のポイント還元術をご紹介します。
@@ -60,6 +92,11 @@
                     <a href="https://www.dxlive.com/" class="btn-primary">現在のキャンペーンを確認する</a>
                 </div>
             </div>
+        
+            <div class="related-articles-container">
+                <h3>関連記事</h3>
+                <div id="related-articles-grid" class="article-grid"></div>
+            </div>
         </section>
     </main>
 
@@ -73,6 +110,7 @@
         </div>
     </footer>
     <script>(function(){var h=document.getElementById("hamburger-btn"),n=document.querySelector(".nav-links"),o=document.getElementById("mobile-overlay");if(!h||!n||!o)return;function t(){h.classList.toggle("active");n.classList.toggle("open");o.classList.toggle("active")}h.addEventListener("click",t);o.addEventListener("click",t);n.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){if(n.classList.contains("open"))t()})})})();</script>
+    <script src="seo_features.js"></script>
 </body>
 
 </html>
