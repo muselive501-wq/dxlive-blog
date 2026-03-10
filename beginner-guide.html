@@ -37,7 +37,8 @@
     <header class="navbar">
         <div class="header-container">
             <a href="index.html" class="logo">DXLIVE<span>FAN BLOG</span></a>
-                        <button class="hamburger" id="hamburger-btn" aria-label="メニュー"><span></span><span></span><span></span></button>
+            <button class="hamburger" id="hamburger-btn"
+                aria-label="メニュー"><span></span><span></span><span></span></button>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="registration-guide.html">登録方法</a>
@@ -45,13 +46,13 @@
                 <a href="category.html?type=events">イベント情報</a>
                 <a href="category.html?type=creators">キャスト向け記事</a>
 
-<div class="search-container">
+                <div class="search-container">
                     <form action="search.html" method="get">
                         <input type="text" name="q" placeholder="記事を検索..." class="search-input" required>
                         <button type="submit" class="search-btn">🔍</button>
                     </form>
                 </div>
-</nav>
+            </nav>
         </div>
     </header>
     <div class="mobile-overlay" id="mobile-overlay"></div>
@@ -62,7 +63,8 @@
 
             <time style="color: var(--text-secondary);">2026.03.10</time>
             <h1>【最新】DXLIVEの始め方・登録方法を初心者向けに優しく解説！</h1>
-            <img src="assets/images/eyecatch_beginner_guide.png" alt="アイキャッチ画像" class="article-image" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+            <img src="assets/images/eyecatch_beginner_unique.png" alt="アイキャッチ画像" class="article-image"
+                style="margin-top: 1.5rem; margin-bottom: 2rem;">
 
             <div class="toc-container">
                 <h2>目次</h2>
@@ -90,7 +92,7 @@
                     <a href="https://www.dxlive.com/" class="btn-primary">今すぐ無料で登録する</a>
                 </div>
             </div>
-        
+
             <div class="related-articles-container">
                 <h3>関連記事</h3>
                 <div id="related-articles-grid" class="article-grid"></div>
@@ -107,7 +109,7 @@
             </div>
         </div>
     </footer>
-    <script>(function(){var h=document.getElementById("hamburger-btn"),n=document.querySelector(".nav-links"),o=document.getElementById("mobile-overlay");if(!h||!n||!o)return;function t(){h.classList.toggle("active");n.classList.toggle("open");o.classList.toggle("active")}h.addEventListener("click",t);o.addEventListener("click",t);n.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){if(n.classList.contains("open"))t()})})})();</script>
+    <script>(function () { var h = document.getElementById("hamburger-btn"), n = document.querySelector(".nav-links"), o = document.getElementById("mobile-overlay"); if (!h || !n || !o) return; function t() { h.classList.toggle("active"); n.classList.toggle("open"); o.classList.toggle("active") } h.addEventListener("click", t); o.addEventListener("click", t); n.querySelectorAll("a").forEach(function (l) { l.addEventListener("click", function () { if (n.classList.contains("open")) t() }) }) })();</script>
     <script src="seo_features.js"></script>
 </body>
 

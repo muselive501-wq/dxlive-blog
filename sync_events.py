@@ -152,11 +152,16 @@ def sync_events():
             display_date = dt.strftime('%Y.%m.%d')
             json_date = dt.strftime('%Y-%m-%d')
 
-            # Extract image (simplistic)
-            img_match = re.search(r'<img.*?src="(.*?)"', full_content)
-            image_url = img_match.group(1) if img_match else "assets/images/eyecatch_event.png"
+            # Use a deterministic filename based on the safe title
+            image_filename = f"eyecatch-{safe_title[:30]}.png"
+            image_path = f"assets/images/events/{image_filename}"
             
-            # Rewrite
+            # If the specific image doesn't exist, use the generic one for now
+            if not os.path.exists(image_path):
+                # Fallback to a central event eyecatch if available
+                image_path = "assets/images/eyecatch_event.png"
+            
+            # Rewrite content
             excerpt = clean_html(full_content)[:100] + "..."
             rewritten_html = rewrite_content(title, clean_html(full_content))
             
@@ -165,7 +170,7 @@ def sync_events():
                 title=title,
                 description=excerpt,
                 date=display_date,
-                image=image_url,
+                image=image_path,
                 content=rewritten_html
             )
             
@@ -181,7 +186,7 @@ def sync_events():
                 "category": "イベント情報",
                 "excerpt": excerpt,
                 "url": filename,
-                "image": image_url
+                "image": image_path
             }
             new_articles.append(article_data)
             print(f"Generated {filename}")

@@ -7,7 +7,7 @@
     "category": "イベント情報",
     "excerpt": "チャット内のコインチップが ハートに大変身   チャット画面にハートを飛ばして女の子を応援しよう。 \n\n\n   \n\n\n\n  \n\n\n\n  \n\n\n\n  \n\n\n\n  \n\n\n\n  ハートで応援するとチャット画...",
     "url": "event-ハートで応援チップが登場.html",
-    "image": "https://s.w.org/images/core/emoji/17.0.2/72x72/2764.png"
+    "image": "assets/images/events/eyecatch_heart_chip.png"
   },
   {
     "id": 1772933820,
@@ -17,7 +17,7 @@
     "category": "イベント情報",
     "excerpt": "バースデイGIRLを誘って「おめでとう！」の一言を伝えてあげてください  きっと会話もぐっと盛り上がるはず  \n\n\n\n さらに… お名前に がつくバースデイGIRLは お誕生日当日限定でチャット画面に...",
     "url": "event-お誕生日の女の子をチェック.html",
-    "image": "https://s.w.org/images/core/emoji/17.0.2/72x72/2764.png"
+    "image": "assets/images/events/eyecatch_birthday.png"
   },
   {
     "id": 1772908443,
@@ -27,7 +27,7 @@
     "category": "イベント情報",
     "excerpt": "いつも noa1214ちゃん を応援してくださり、本当にありがとうございます  \n\n\n\n 2月の【バレンタインイベント】では たくさんのご参加・応援をいただきありがとうございました♡ \n\n\n\n そして...",
     "url": "event-noa1214ちゃんの3月のイベントのお知らせ.html",
-    "image": "https://www.dxlive.com/blog/wp-content/uploads/2026/03/noa1214_anime_Mar2026.png"
+    "image": "assets/images/events/eyecatch_noa_announcement.png"
   },
   {
     "id": 121,
@@ -37,7 +37,7 @@
     "category": "登録方法",
     "excerpt": "DXLIVEの登録手順をスマホ・PC別に完全解説。年齢確認から初回ボーナスの受け取りまで、最短1分で始められます。",
     "url": "registration-guide.html",
-    "image": "assets/images/eyecatch_registration.png"
+    "image": "assets/images/eyecatch_registration_unique.png"
   },
   {
     "id": 120,
@@ -47,7 +47,7 @@
     "category": "登録方法",
     "excerpt": "運営歴20年超の信頼性、SSL暗号化、PCI DSS準拠の決済、ユーザー口コミまで多角的に検証します。",
     "url": "reputation-review.html",
-    "image": "assets/images/eyecatch_reputation.png"
+    "image": "assets/images/eyecatch_safety_unique.png"
   },
   {
     "id": 119,
@@ -57,7 +57,7 @@
     "category": "登録方法",
     "excerpt": "退会手順を図解で解説。追加課金なし・再登録可能・約2分で完了するシンプルな退会プロセスを紹介。",
     "url": "withdrawal-guide.html",
-    "image": "assets/images/eyecatch_withdrawal.png"
+    "image": "assets/images/eyecatch_withdrawal_unique_v2.png"
   },
   {
     "id": 118,
@@ -87,7 +87,7 @@
     "category": "使い方",
     "excerpt": "パーティ・2ショット・のぞき・チップ・バイブ連動の全モードを比較表付きで完全解説します。",
     "url": "all-features-guide.html",
-    "image": "assets/images/eyecatch_allfeatures.png"
+    "image": "assets/images/eyecatch_features_unique.png"
   },
   {
     "id": 115,
@@ -117,7 +117,7 @@
     "category": "キャスト向け記事",
     "excerpt": "美女系・人妻系・素人系・外国人の4ジャンルから厳選したTOP5を配信スタイル分析付きで紹介。",
     "url": "monthly-ranking.html",
-    "image": "assets/images/eyecatch_ranking.png"
+    "image": "assets/images/eyecatch_ranking_unique.png"
   },
   {
     "id": 112,
@@ -127,7 +127,7 @@
     "category": "登録方法",
     "excerpt": "初回ログイン後の具体的な行動ガイド。無料で楽しむ方法、失敗しないチャットの始め方を丁寧に解説。",
     "url": "first-time-tips.html",
-    "image": "assets/images/eyecatch_firsttime.png"
+    "image": "assets/images/eyecatch_pro_tips_unique.png"
   },
   {
     "id": 111,
@@ -137,7 +137,7 @@
     "category": "キャスト向け記事",
     "excerpt": "DXLIVEで人気のジャンル（人妻・素人・美少女）と、自分に合ったキャストを効率よく探すための検索テクニックを公開します。",
     "url": "popular-casts.html",
-    "image": "assets/images/eyecatch_popular_casts.png"
+    "image": "assets/images/eyecatch_popular_casts_unique.png"
   },
   {
     "id": 110,
@@ -167,7 +167,7 @@
     "category": "使い方",
     "excerpt": "繋がらない・重い・メールが届かない等のよくあるトラブルの解決策を、初心者でも分かりやすくまとめました。",
     "url": "trouble-shooting.html",
-    "image": "assets/images/eyecatch_troubleshooting.png"
+    "image": "assets/images/eyecatch_troubleshooting_unique.png"
   },
   {
     "id": 107,
@@ -177,7 +177,7 @@
     "category": "使い方",
     "excerpt": "アプリ版の有無や、スマホのブラウザでアプリのように快適に視聴するための設定方法を解説します。",
     "url": "mobile-guide.html",
-    "image": "assets/images/eyecatch_mobile_guide.png"
+    "image": "assets/images/eyecatch_mobile_view_unique.png"
   },
   {
     "id": 106,
@@ -197,7 +197,7 @@
     "category": "使い方",
     "excerpt": "クレジットカードなしで利用する方法や、家族にバレないVプリカ・コンビニ払いの匿名決済を解説します。",
     "url": "payment-guide.html",
-    "image": "assets/images/eyecatch_payment_guide.png"
+    "image": "assets/images/eyecatch_payment_unique.png"
   },
   {
     "id": 104,
@@ -207,7 +207,7 @@
     "category": "イベント情報",
     "excerpt": "今すぐ貰える無料お試しポイントの獲得方法から、お得な倍増キャンペーン、クーポンの使い方まで公開！",
     "url": "campaign-info.html",
-    "image": "assets/images/eyecatch_campaign_info.png"
+    "image": "assets/images/eyecatch_campaign_unique.png"
   },
   {
     "id": 103,
@@ -217,7 +217,7 @@
     "category": "使い方",
     "excerpt": "DXLIVEの料金体系、1分あたりの単価、お得な購入方法、利用時の節約テクニックを分かりやすく解説。",
     "url": "pricing-guide.html",
-    "image": "assets/images/eyecatch_pricing_guide.png"
+    "image": "assets/images/eyecatch_pricing_unique.png"
   },
   {
     "id": 102,
@@ -227,7 +227,7 @@
     "category": "登録方法",
     "excerpt": "登録から最初の視聴まで迷わないためのステップバイステップガイド。無料で楽しむためのコツも紹介。",
     "url": "beginner-guide.html",
-    "image": "assets/images/eyecatch_beginner_guide.png"
+    "image": "assets/images/eyecatch_beginner_unique.png"
   },
   {
     "id": 101,
@@ -247,7 +247,7 @@
     "category": "使い方",
     "excerpt": "DXLIVE（デラックスライブ）の配信録画やスクリーンショット撮影の可否について。バレる仕組みやアカウント凍結などのペナルティを解説。",
     "url": "recording-rules.html",
-    "image": "assets/images/eyecatch_recording.png"
+    "image": "assets/images/eyecatch_recording_unique.png"
   },
   {
     "id": 99,
@@ -257,7 +257,7 @@
     "category": "使い方",
     "excerpt": "DXLIVEをもっと楽しむための中・上級者向け裏技ガイド。複数視聴（多窓）のやり方やミッションによるポイント稼ぎ、モテる会話術を公開。",
     "url": "advanced-techniques.html",
-    "image": "assets/images/eyecatch_advanced.png"
+    "image": "assets/images/eyecatch_advanced_unique.png"
   },
   {
     "id": 98,
@@ -287,7 +287,7 @@
     "category": "キャスト向け記事",
     "excerpt": "素人、人妻、コスプレ、巨乳などフェティッシュな欲求を満たすDXLIVEのジャンル検索攻略法。おすすめの探し方を紹介します。",
     "url": "genre-guide.html",
-    "image": "assets/images/eyecatch_genre.png"
+    "image": "assets/images/eyecatch_genre_unique.png"
   },
   {
     "id": 95,
