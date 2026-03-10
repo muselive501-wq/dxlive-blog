@@ -17,7 +17,8 @@
     <header class="navbar">
         <div class="header-container">
             <a href="index.html" class="logo">DXLIVE<span>FAN BLOG</span></a>
-                        <button class="hamburger" id="hamburger-btn" aria-label="メニュー"><span></span><span></span><span></span></button>
+            <button class="hamburger" id="hamburger-btn"
+                aria-label="メニュー"><span></span><span></span><span></span></button>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="registration-guide.html">登録方法</a>
@@ -25,13 +26,13 @@
                 <a href="category.html?type=events">イベント情報</a>
                 <a href="category.html?type=creators">キャスト向け記事</a>
 
-<div class="search-container">
+                <div class="search-container">
                     <form action="search.html" method="get">
                         <input type="text" name="q" placeholder="記事を検索..." class="search-input" required>
                         <button type="submit" class="search-btn">🔍</button>
                     </form>
                 </div>
-</nav>
+            </nav>
         </div>
     </header>
     <div class="mobile-overlay" id="mobile-overlay"></div>
@@ -68,7 +69,7 @@
                     const card = document.createElement('div');
                     card.className = 'news-card';
                     card.innerHTML = `
-                        <div class="news-image"><img src="${item.image}" alt="${item.title}" style="width:100%; height:100%; object-fit:cover;"></div>
+                        <div class="news-image"><img src="${item.image}" alt="${item.title}"></div>
                         <div class="news-content">
                             <div class="news-meta">
                                 <span class="news-category">${item.category}</span>
@@ -79,7 +80,7 @@
                             <a href="${item.url}" class="read-more">READ MORE</a>
                         </div>
                     `;
-                    card.addEventListener('click',function(e){if(e.target.tagName!=='A')window.location.href=item.url;});
+                    card.addEventListener('click', function (e) { if (e.target.tagName !== 'A') window.location.href = item.url; });
                     container.appendChild(card);
                 });
             } catch (error) {
@@ -91,7 +92,7 @@
             loadNews();
         });
     </script>
-    <script>(function(){var h=document.getElementById("hamburger-btn"),n=document.querySelector(".nav-links"),o=document.getElementById("mobile-overlay");if(!h||!n||!o)return;function t(){h.classList.toggle("active");n.classList.toggle("open");o.classList.toggle("active")}h.addEventListener("click",t);o.addEventListener("click",t);n.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){if(n.classList.contains("open"))t()})})})();</script>
+    <script>(function () { var h = document.getElementById("hamburger-btn"), n = document.querySelector(".nav-links"), o = document.getElementById("mobile-overlay"); if (!h || !n || !o) return; function t() { h.classList.toggle("active"); n.classList.toggle("open"); o.classList.toggle("active") } h.addEventListener("click", t); o.addEventListener("click", t); n.querySelectorAll("a").forEach(function (l) { l.addEventListener("click", function () { if (n.classList.contains("open")) t() }) }) })();</script>
 </body>
 
 </html>

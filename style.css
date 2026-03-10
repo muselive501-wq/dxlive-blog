@@ -644,6 +644,9 @@ footer {
 }
 
 .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.6s ease;
 }
 
@@ -709,7 +712,9 @@ footer {
     -webkit-box-orient: vertical;
     overflow: hidden;
     flex-grow: 1;
-}/* ==========================================================================
+}
+
+/* ==========================================================================
    SEO Features (Search, TOC, Related)
    ========================================================================== */
 
@@ -722,10 +727,18 @@ footer {
 
 .search-container form {
     display: flex;
-    background: var(--bg-hover);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.search-container form:focus-within {
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .search-input {
@@ -735,12 +748,16 @@ footer {
     color: var(--text-primary);
     outline: none;
     font-size: 0.9rem;
-    width: 150px;
-    transition: width 0.3s;
+    width: 160px;
+    transition: width 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .search-input:focus {
-    width: 200px;
+    width: 220px;
 }
 
 .search-btn {
@@ -749,10 +766,11 @@ footer {
     padding: 8px 12px;
     cursor: pointer;
     color: var(--text-secondary);
+    transition: color 0.3s ease;
 }
 
 .search-btn:hover {
-    color: var(--accent-primary);
+    color: var(--text-primary);
 }
 
 /* Table of Contents (TOC) */
@@ -844,12 +862,15 @@ footer {
         width: 100%;
         display: block;
     }
+
     .search-container form {
         width: 100%;
     }
+
     .search-input {
         width: 100%;
     }
+
     .search-input:focus {
         width: 100%;
     }
