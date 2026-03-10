@@ -95,6 +95,7 @@
                             <a href="${item.url}" class="read-more">READ MORE</a>
                         </div>
                     `;
+                    card.addEventListener('click',function(e){if(e.target.tagName!=='A')window.location.href=item.url;});
                     container.appendChild(card);
                 });
             } catch (error) {

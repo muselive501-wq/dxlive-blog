@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 DXLIVE FAN BLOG Auto-Update Script
 Fetches the latest articles from the DXLIVE FAN BLOG RSS feed,
@@ -37,7 +37,7 @@ STATIC_ARTICLES = [
         "category": "キャスト紹介",
         "excerpt": "DXLIVEで人気のジャンル（人妻・素人・美少女）と、自分に合ったキャストを効率よく探すための検索テクニックを公開します。",
         "url": "popular-casts.html",
-        "image": "assets/images/news_thumbnail_4_1773045768252.png"
+        "image": "assets/images/eyecatch_popular_casts.png"
     },
     {
         "id": 110,
@@ -47,7 +47,7 @@ STATIC_ARTICLES = [
         "category": "サイト比較",
         "excerpt": "他社サイトとDXLIVEを徹底比較。画質、料金、キャストの質、独自機能の観点からDXLIVEが選ばれる理由を解説します。",
         "url": "comparison.html",
-        "image": "assets/images/news_thumbnail_3_1773045736171.png"
+        "image": "assets/images/eyecatch_comparison.png"
     },
     {
         "id": 109,
@@ -57,7 +57,7 @@ STATIC_ARTICLES = [
         "category": "プライバシー",
         "excerpt": "知り合いにバレずに遊ぶための設定、履歴削除、仮名決済の方法など、プライバシーを守るための全知識をまとめました。",
         "url": "privacy-rules.html",
-        "image": "assets/images/news_thumbnail_2_1773045722676.png"
+        "image": "assets/images/eyecatch_privacy_rules.png"
     },
     {
         "id": 108,
@@ -67,7 +67,7 @@ STATIC_ARTICLES = [
         "category": "トラブル解決",
         "excerpt": "繋がらない・重い・メールが届かない等のよくあるトラブルの解決策を、初心者でも分かりやすくまとめました。",
         "url": "trouble-shooting.html",
-        "image": "assets/images/news_thumbnail_1_1773045710180.png"
+        "image": "assets/images/eyecatch_troubleshooting.png"
     },
     {
         "id": 107,
@@ -77,7 +77,7 @@ STATIC_ARTICLES = [
         "category": "モバイルガイド",
         "excerpt": "アプリ版の有無や、スマホのブラウザでアプリのように快適に視聴するための設定方法を解説します。",
         "url": "mobile-guide.html",
-        "image": "assets/images/news_thumbnail_4_1773045768252.png"
+        "image": "assets/images/eyecatch_mobile_guide.png"
     },
     {
         "id": 106,
@@ -87,7 +87,7 @@ STATIC_ARTICLES = [
         "category": "独自機能",
         "excerpt": "2ショットチャットの楽しみ方や、遠隔操作で一体感を味わえる「リモちゃ」機能の魅力を徹底解説！",
         "url": "twoshot-guide.html",
-        "image": "assets/images/news_thumbnail_3_1773045736171.png"
+        "image": "assets/images/eyecatch_twoshot_guide.png"
     },
     {
         "id": 105,
@@ -97,7 +97,7 @@ STATIC_ARTICLES = [
         "category": "支払い方法",
         "excerpt": "クレジットカードなしで利用する方法や、家族にバレないVプリカ・コンビニ払いの匿名決済を解説します。",
         "url": "payment-guide.html",
-        "image": "assets/images/news_thumbnail_2_1773045722676.png"
+        "image": "assets/images/eyecatch_payment_guide.png"
     },
     {
         "id": 104,
@@ -107,7 +107,7 @@ STATIC_ARTICLES = [
         "category": "キャンペーン",
         "excerpt": "今すぐ貰える無料お試しポイントの獲得方法から、お得な倍増キャンペーン、クーポンの使い方まで公開！",
         "url": "campaign-info.html",
-        "image": "assets/images/news_thumbnail_1_1773045710180.png"
+        "image": "assets/images/eyecatch_campaign_info.png"
     },
     {
         "id": 103,
@@ -117,7 +117,7 @@ STATIC_ARTICLES = [
         "category": "料金・ポイント",
         "excerpt": "DXLIVEの料金体系、1分あたりの単価、お得な購入方法、利用時の節約テクニックを分かりやすく解説。",
         "url": "pricing-guide.html",
-        "image": "assets/images/news_thumbnail_4_1773045768252.png"
+        "image": "assets/images/eyecatch_pricing_guide.png"
     },
     {
         "id": 102,
@@ -127,7 +127,7 @@ STATIC_ARTICLES = [
         "category": "初心者ガイド",
         "excerpt": "登録から最初の視聴まで迷わないためのステップバイステップガイド。無料で楽しむためのコツも紹介。",
         "url": "beginner-guide.html",
-        "image": "assets/images/news_thumbnail_3_1773045736171.png"
+        "image": "assets/images/eyecatch_beginner_guide.png"
     }
 ]
 
