@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -17,6 +17,7 @@
     <header class="navbar">
         <div class="header-container">
             <div class="logo">DXLIVE<span>FAN BLOG</span></div>
+                        <button class="hamburger" id="hamburger-btn" aria-label="メニュー"><span></span><span></span><span></span></button>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="category.html?type=news">News</a>
@@ -26,6 +27,7 @@
             </nav>
         </div>
     </header>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
 
     <main class="main-content">
         <section class="section-container">
@@ -69,6 +71,7 @@
             </div>
         </div>
     </footer>
+    <script>(function(){var h=document.getElementById("hamburger-btn"),n=document.querySelector(".nav-links"),o=document.getElementById("mobile-overlay");if(!h||!n||!o)return;function t(){h.classList.toggle("active");n.classList.toggle("open");o.classList.toggle("active")}h.addEventListener("click",t);o.addEventListener("click",t);n.querySelectorAll("a").forEach(function(l){l.addEventListener("click",function(){if(n.classList.contains("open"))t()})})})();</script>
 </body>
 
 </html>
