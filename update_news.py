@@ -30,6 +30,106 @@ CATEGORY_MAP = {
 # Static articles that should always be preserved in the JSON
 STATIC_ARTICLES = [
     {
+        "id": 121,
+        "categoryId": "knowhow",
+        "title": "【2026年最新】DXLIVEの登録方法を徹底解説（スマホ・PC対応）",
+        "date": "2026.03.10",
+        "category": "登録ガイド",
+        "excerpt": "DXLIVEの登録手順をスマホ・PC別に完全解説。年齢確認から初回ボーナスの受け取りまで、最短1分で始められます。",
+        "url": "registration-guide.html",
+        "image": "assets/images/eyecatch_registration.png"
+    },
+    {
+        "id": 120,
+        "categoryId": "knowhow",
+        "title": "DXLIVEは安全？運営実態や口コミ・評判を徹底調査【2026年版】",
+        "date": "2026.03.10",
+        "category": "安全性レビュー",
+        "excerpt": "運営歴20年超の信頼性、SSL暗号化、PCI DSS準拠の決済、ユーザー口コミまで多角的に検証します。",
+        "url": "reputation-review.html",
+        "image": "assets/images/eyecatch_reputation.png"
+    },
+    {
+        "id": 119,
+        "categoryId": "knowhow",
+        "title": "DXLIVEの退会・解約方法を完全ガイド【2026年最新】",
+        "date": "2026.03.10",
+        "category": "退会方法",
+        "excerpt": "退会手順を図解で解説。追加課金なし・再登録可能・約2分で完了するシンプルな退会プロセスを紹介。",
+        "url": "withdrawal-guide.html",
+        "image": "assets/images/eyecatch_withdrawal.png"
+    },
+    {
+        "id": 118,
+        "categoryId": "knowhow",
+        "title": "家族にバレない？DXLIVEクレジットカード明細の表記と対策",
+        "date": "2026.03.10",
+        "category": "決済ガイド",
+        "excerpt": "明細の表記内容からVプリカ・バンドルカードなど完全匿名の決済方法まで、バレない戦略を徹底解説。",
+        "url": "credit-card-billing.html",
+        "image": "assets/images/eyecatch_creditcard.png"
+    },
+    {
+        "id": 117,
+        "categoryId": "knowhow",
+        "title": "一番お得なコインの買い方！DXLIVEボーナス時期とチャージ手順",
+        "date": "2026.03.10",
+        "category": "コイン購入",
+        "excerpt": "ポイントの仕組み、ボーナス倍増キャンペーンの時期、最もお得なパッケージの選び方を完全網羅。",
+        "url": "coin-purchase-guide.html",
+        "image": "assets/images/eyecatch_coin.png"
+    },
+    {
+        "id": 116,
+        "categoryId": "knowhow",
+        "title": "2Wayチャットからバイブ連動まで！DXLIVEの全機能を遊び尽くす",
+        "date": "2026.03.10",
+        "category": "機能解説",
+        "excerpt": "パーティ・2ショット・のぞき・チップ・バイブ連動の全モードを比較表付きで完全解説します。",
+        "url": "all-features-guide.html",
+        "image": "assets/images/eyecatch_allfeatures.png"
+    },
+    {
+        "id": 115,
+        "categoryId": "knowhow",
+        "title": "配信で使える！海外ライバーに喜ばれる英語フレーズ60選",
+        "date": "2026.03.10",
+        "category": "英語フレーズ",
+        "excerpt": "挨拶、褒め言葉、リクエスト、退室まで。シチュエーション別に即使える60フレーズ＆NG表現。",
+        "url": "english-phrases.html",
+        "image": "assets/images/eyecatch_english.png"
+    },
+    {
+        "id": 114,
+        "categoryId": "events",
+        "title": "ランキング戦・ギフトイベント攻略！DXLIVEイベントの仕組みと参加方法",
+        "date": "2026.03.10",
+        "category": "イベント攻略",
+        "excerpt": "ランキング戦、ギフトイベント、季節限定イベントの参加方法と効率的な応援テクニックを解説。",
+        "url": "event-guide.html",
+        "image": "assets/images/eyecatch_event.png"
+    },
+    {
+        "id": 113,
+        "categoryId": "creators",
+        "title": "【2026年3月】DXLIVEおすすめキャストランキングTOP5（ジャンル別）",
+        "date": "2026.03.10",
+        "category": "ランキング",
+        "excerpt": "美女系・人妻系・素人系・外国人の4ジャンルから厳選したTOP5を配信スタイル分析付きで紹介。",
+        "url": "monthly-ranking.html",
+        "image": "assets/images/eyecatch_ranking.png"
+    },
+    {
+        "id": 112,
+        "categoryId": "knowhow",
+        "title": "初めてのDXLIVE！失敗しない楽しみ方のコツ＆行動ガイド",
+        "date": "2026.03.10",
+        "category": "初回ガイド",
+        "excerpt": "初回ログイン後の具体的な行動ガイド。無料で楽しむ方法、失敗しないチャットの始め方を丁寧に解説。",
+        "url": "first-time-tips.html",
+        "image": "assets/images/eyecatch_firsttime.png"
+    },
+    {
         "id": 111,
         "categoryId": "creators",
         "title": "美女ぞろい！DXLIVEで「相性抜群の女の子」を見つける最短ルート",
@@ -128,7 +228,7 @@ STATIC_ARTICLES = [
         "excerpt": "登録から最初の視聴まで迷わないためのステップバイステップガイド。無料で楽しむためのコツも紹介。",
         "url": "beginner-guide.html",
         "image": "assets/images/eyecatch_beginner_guide.png"
-    }
+    },
 ]
 
 # (Content continues with fetch functions etc. but I'll only provide the main part to restore script functionality)
