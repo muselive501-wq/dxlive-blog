@@ -468,6 +468,78 @@ footer {
     }
 }
 
+/* --- Article Body Typography --- */
+.article-body h2 {
+    position: relative;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin: 3rem 0 1.5rem;
+    padding: 0.9rem 1.2rem 0.9rem 1.4rem;
+    background: linear-gradient(135deg, rgba(255, 45, 85, 0.12) 0%, rgba(0, 198, 255, 0.06) 100%);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.article-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 2rem 0 1rem;
+    padding-left: 0.8rem;
+    border-left: 3px solid var(--secondary-accent);
+}
+
+.article-body p {
+    margin-bottom: 1.2rem;
+    line-height: 1.85;
+    color: var(--text-secondary);
+}
+
+.article-body ul,
+.article-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.article-body li {
+    margin-bottom: 0.5rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+}
+
+.article-body a {
+    color: var(--secondary-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.article-body a:hover {
+    color: var(--accent-color);
+}
+
+.article-body table {
+    color: var(--text-secondary);
+}
+
+.article-body dl {
+    margin-bottom: 1.5rem;
+}
+
+.article-body dt {
+    margin-top: 1rem;
+    color: var(--text-primary);
+}
+
+.article-body dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
 /* --- Inline Article Images --- */
 .article-image {
     width: 100%;
