@@ -107,5 +107,66 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
             .catch(error => console.error('Error loading related articles:', error));
+    // 3. Lightbox / Image Zoom Implementation
+    const images = document.querySelectorAll('.article-body img');
+    if (images.length > 0) {
+        // Create Lightbox Elements
+        const modal = document.createElement('div');
+        modal.className = 'lightbox-modal';
+        modal.innerHTML = `
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="img01">
+        `;
+        document.body.appendChild(modal);
+
+        const modalImg = document.getElementById("img01");
+        
+        images.forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                document.body.classList.add('modal-open');
+            });
+        });
+
+        // Close modal
+        const closeBtn = document.getElementsByClassName("lightbox-close")[0];
+        const closeModal = () => {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+            modalImg.style.transform = "scale(1)"; // Reset zoom
+        };
+
+        closeBtn.onclick = closeModal;
+        modal.onclick = (e) => {
+            if (e.target === modal) closeModal();
+        };
+
+        // Simple Pinch-to-Zoom Support (using CSS scale)
+        let scale = 1;
+        let startDist = 0;
+
+        modalImg.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 2) {
+                startDist = Math.hypot(
+                    e.touches[0].pageX - e.touches[1].pageX,
+                    e.touches[0].pageY - e.touches[1].pageY
+                );
+            }
+        }, { passive: true });
+
+        modalImg.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 2) {
+                const dist = Math.hypot(
+                    e.touches[0].pageX - e.touches[1].pageX,
+                    e.touches[0].pageY - e.touches[1].pageY
+                );
+                const delta = dist / startDist;
+                scale = Math.min(Math.max(1, scale * delta), 4); // Limit zoom between 1x and 4x
+                modalImg.style.transform = `scale(${scale})`;
+                startDist = dist;
+            }
+        }, { passive: true });
     }
 });
